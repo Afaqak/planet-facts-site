@@ -5,7 +5,6 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const planets = [
-    "Earth",
     "Mercury",
     "Mars",
     "Venus",
@@ -29,6 +28,9 @@ const Navbar = () => {
         className={`hidden
       md:flex md:space-x-6`}
       >
+        <li>
+          <Link href="/">Earth</Link>
+        </li>
         {planets.map((planet) => (
           <li key={planet}>
             <Link href={`/${planet.toLowerCase()}`}>{planet}</Link>
@@ -47,6 +49,9 @@ const Navbar = () => {
         text-xl
         space-y-2 overflow-y-hidden mt-20"
         >
+            <li className="border-gray-500 p-3 border-b">
+              <Link href={`/`}>Earth</Link>
+            </li>
           {planets.map((planet) => (
             <li key={planet} className="border-gray-500 p-3 border-b">
               <Link href={`/${planet.toLowerCase()}`}>{planet}</Link>

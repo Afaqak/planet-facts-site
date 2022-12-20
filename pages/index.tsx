@@ -54,7 +54,7 @@ export default function Home() {
           </div>
       </div>
       </div>
-      <div className='flex p-7 flex-row space-x-10 text-white w-[fit-content]'>
+      <div className='flex md:p-7 flex-col md:flex-row md:space-x-10 text-white w-[fit-content]'>
       <div className='border border-gray-400 px-20 py-4'>
           <h2 className='text-[10px]'>
               Revolution Time
