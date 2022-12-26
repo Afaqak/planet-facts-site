@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { useRouter } from 'next/router'
 import data from '../../data.json';
+
 const Planets = () => {
     const router = useRouter();
     const { planets } = router.query;

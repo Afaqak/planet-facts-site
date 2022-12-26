@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='p-5'>
-        <div className='flex text-white justify-between items-center'>
+        <div className='flex text-white justify-between items-center space-x-10'>
           <Image src={planet.images.planet} alt={planet.name} width={1000} height={1000} />
             <div className='flex flex-col space-y-7'>
             <h1>
