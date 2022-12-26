@@ -15,8 +15,11 @@ const Navbar = () => {
   ];
   return (
     <nav
-      className="text-white px-8 font-sans h-[12vh] flex 
-    justify-between items-center border-b border-gray-300"
+      className="text-white px-8 font-sans h-[10vh] flex 
+    justify-between items-center border-b border-gray-300
+    bg-background-stars bg-cover bg-center bg-no-repeat bg-fixed
+    bg-[#070722]
+    "
     >
       <h1 className="text-3xl font-bold tracking-wider">The Planet</h1>
       <FontAwesomeIcon
