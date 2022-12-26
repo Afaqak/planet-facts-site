@@ -1,10 +1,12 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import data from '../data.json';
 import { useState } from 'react';
-import pic from '../assets/images/desktop.png';
+import Image from 'next/image';
+
 export default function Home() {
   const [planet, setPlanet] = useState(data[0]);
+  console.log(planet);
+  
   const [category, setCategory] = useState(planet.overview);
 
     
@@ -17,7 +19,7 @@ export default function Home() {
       </Head>
       <div className='p-5'>
         <div className='flex text-white justify-between items-center'>
-          <img src={planet.images.internal} alt='logo' className='h-[20vh] w-[20vh]' />
+          <Image src={planet.images.planet} alt={planet.name} width={1000} height={1000} />
             <div className='flex flex-col space-y-7'>
             <h1>
               {planet.name}
