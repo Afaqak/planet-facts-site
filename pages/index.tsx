@@ -2,10 +2,10 @@ import Head from 'next/head'
 import data from '../data.json';
 import { useState } from 'react';
 import Image from 'next/image';
-
+import { useRouter } from 'next/router';
 export default function Home() {
-  const [planet, setPlanet] = useState(data[0]);
   
+  const planet = data[0];
   const [category, setCategory] = useState(planet.overview);
   const [image, setImage] = useState(planet.images.planet);
     
