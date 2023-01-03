@@ -29,12 +29,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className="font-sans relative h-[90vh] bg-background-stars bg-cover bg-center bg-no-repeat bg-fixed
+        className="font-mono relative min-h-screen
+        bg-background-stars bg-cover bg-center bg-no-repeat bg-fixed
     bg-[#070722]"
       >
         <div
           className="flex flex-col first-letter:
-        justify-evenly py-8
+        justify-evenly py-8 mb-20 md:mb-14
          px-8 md:px-16 space-y-4 md:space-y-8
       items-center h-[70vh] md:[75vh] md:flex-row"
         >
@@ -45,7 +46,7 @@ export default function Home() {
       md:w-[30vw] md:h-[30vw]
       w-[25vw] h-[25vw]
       md:object-cover
-      mt-16 md:mt-0
+       mt-32 md:mt-0
       "
             width={300}
             height={300}
@@ -61,8 +62,8 @@ export default function Home() {
             <h1 className="text-2xl md:text-4xl font-bold tracking-wider text-white">
               {planet.name.toUpperCase()}
             </h1>
-            <p className="text-white md:text-xl text-sm">{category.content}</p>
-            <p className="text-white text-sm">
+            <p className="text-white md:text-xl text-lg">{category.content}</p>
+            <p className="text-white text-sm ">
               Source :{" "}
               <a href={category.source} className="text-purple-600">
                 Wikipedia
