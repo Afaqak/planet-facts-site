@@ -9,6 +9,7 @@ type Feature = {
   rotation: string;
   revolution: string;
   radius: string;
+  temperature: string;
 };
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
     rotation: planet.rotation,
     revolution: planet.revolution,
     radius: planet.radius,
+    temperature: planet.temperature,
   };
 
   return (
@@ -43,7 +45,7 @@ export default function Home() {
             src={image}
             alt={planet.name}
             className="object-cover 
-      md:w-[30vw] md:h-[30vw]
+      md:w-[30vw] md:h-[34vw]
       w-[25vw] h-[25vw]
       md:object-cover
        mt-32 md:mt-0
@@ -53,9 +55,9 @@ export default function Home() {
           />
           <div
             className="flex flex-col
-      md:w-[40vw] space-y-2 md:space-y-4 md:text-left
-      text-center text-xs md:text-xl
-      px-4 md:px-0
+        md:w-[40vw] space-y-2 md:space-y-4 md:text-left
+        text-center text-xs md:text-xl
+        px-4 md:px-0
 
       "
           >
@@ -74,7 +76,7 @@ export default function Home() {
         absolute -top-2 left-0 flex-row md:relative
         justify-between
          md:space-x-0 md:space-y-4 md:justify-center md:gap-0
-         text-sm md:text-lg mb-5 md:mb-0 border-b border-gray-300
+         text-sm md:text-md mb-5 md:mb-0 border-b border-gray-300
           md:border-b-0 w-full md:w-auto 
         "
             >
@@ -110,12 +112,12 @@ export default function Home() {
               </button>
               <button
                 className="  text-white font-bold 
-          py-3 px-10 border-transparent
-          md:border-white
-          md:py-4 md:px-10 md:border
-          transition duration-150 ease-in
-          hover:bg-green-600
-          hover:text-white"
+            py-3 px-10 border-transparent
+             md:border-white
+            md:py-4 md:px-10 md:border
+            transition duration-150 ease-in
+           hover:bg-green-600
+           hover:text-white"
                 onClick={() => {
                   setCategory(planet.geology);
                   setImage(planet.images.geology);
@@ -126,9 +128,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Footer 
-        features={feature}
-        />
+        <Footer features={feature} />
       </div>
     </div>
   );
