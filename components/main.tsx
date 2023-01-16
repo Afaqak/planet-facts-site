@@ -20,7 +20,7 @@ const Main = ({planet}:{planet:string}) => {
   };
   return (
     <div
-      className="py-3 px-6 
+      className="py-4 px-6 
     text-gray-100 font-antonio flex flex-col justify-center items-center
     "
     >
@@ -28,7 +28,7 @@ const Main = ({planet}:{planet:string}) => {
       md:flex-col justify-center items-center">
       <div className="mt-5">
         <img 
-        className="w-[300px] md:w-[400px] mb-4"
+        className="w-[300px] md:w-[400px] mb-5"
         src={
           activeImage
         } alt="planet" />
@@ -119,32 +119,32 @@ const Main = ({planet}:{planet:string}) => {
       </div>
       </div>
       <div
-        className="flex flex-col flex-wrap  md:flex-row mt-5
-          justify-between items-center w-full gap-2 pb-4
+        className="flex flex-col md:flex-row mt-5
+          justify-between items-center w-full gap-2
         "
       >
         <div className="
-        min-w-[250px]
+        w-[25rem]
         border border-gray-700 py-4 px-6">
-          <h1 className="text-2xl font-normal">Rotation Time</h1>
+          <h1 className="text-2xl font-normal">Rotation </h1>
           <p className="text-gray-500 text-sm">{planetData.rotation}</p>
         </div>
         <div className=" 
-        min-w-[250px]
+        w-[25rem]
         border border-gray-700 py-4 px-6">
-          <h1 className="text-2xl font-normal">Revolution Time</h1>
+          <h1 className="text-2xl font-normal">Revolution</h1>
           <p className="text-gray-500 text-sm">{planetData.revolution}</p>
         </div>
         <div className=" 
-        min-w-[250px]
+        w-[25rem]
         border border-gray-700 py-4 px-6">
-          <h1 className="text-2xl font-normal">Radius calculation</h1>
+          <h1 className="text-2xl font-normal">Radius </h1>
           <p className="text-gray-500 text-sm">{planetData.radius}</p>
         </div>
         <div className="
-        min-w-[250px]
+        w-[25rem]
         border border-gray-700 py-4 px-6">
-          <h1 className="text-2xl font-normal">Average Temp.</h1>
+          <h1 className="text-2xl font-normal">Average</h1>
           <p className="text-gray-500 text-sm">{planetData.temperature}</p>
         </div>
       </div>

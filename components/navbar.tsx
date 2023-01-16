@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useRouter } from "next/router";
 const Navbar = () => {
+  const router = useRouter();
   const [show, setShow] = useState(false);
   const planets = [
     "Mercury",
@@ -32,20 +34,26 @@ const Navbar = () => {
       md:flex md:space-x-6`}
       >
         <li
+          onClick={() => {
+            router.push("/");
+            setShow(false)}}
           className="hover:scale-110 transition-all duration-300 transform
         hover:text-gray-300 
 "
         >
-          <Link href="/">Earth</Link>
+          <p className="cursor-pointer">Earth</p>
         </li>
         {planets.map((planet) => (
-          <li
+          <li onClick={() => {
+            router.push(`/${planet.toLowerCase()}`);
+            setShow(false)}}
             className="hover:scale-110 transition-all duration-300 transform 
           hover:text-gray-300
           "
             key={planet}
           >
-            <Link href={`/${planet.toLowerCase()}`}>{planet}</Link>
+            <p className="cursor-pointer">{planet}</p>
+           
           </li>
         ))}
       </ul>
@@ -67,17 +75,18 @@ const Navbar = () => {
              hover:text-gray-700 transition-all duration-300 transform
             hover:translate-x-2"
           >
-            <Link href={`/`}>Earth</Link>
+            <p onClick={() => {router.push("/"); setShow(false)}}>Earth</p>
           </li>
           {planets.map((planet) => (
             <li
+            onClick={() => {router.push(`/${planet.toLowerCase()}`); setShow(false)}}
               key={planet}
               className="border-gray-500 p-3 border-b 
              hover:text-gray-700 transition-all duration-300 transform
             hover:translate-x-2
             "
             >
-              <Link href={`/${planet.toLowerCase()}`}>{planet}</Link>
+              <p >{planet}</p>
             </li>
           ))}
         </ul>

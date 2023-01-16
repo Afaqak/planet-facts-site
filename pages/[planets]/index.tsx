@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { useRouter } from 'next/router'
 import data from '../../data.json';
 import Main from '../../components/main';
+import Navbar from '../../components/navbar';
 const Planets = () => {
     const router = useRouter();
     const { planets } = router.query;
@@ -17,6 +18,7 @@ const Planets = () => {
         bg-background-stars bg-cover bg-center bg-no-repeat bg-fixed
     bg-[#070722]"
       > 
+        <Navbar />
       <Main planet={planet?.name} />
       </div>
       </div>

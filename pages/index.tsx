@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Main from "../components/main";
-
+import Navbar from "../components/navbar";
 export default function Home() {
 
 
@@ -16,6 +16,7 @@ export default function Home() {
         bg-background-stars bg-cover bg-center bg-no-repeat bg-fixed
     bg-[#070722]"
       > 
+        <Navbar />
         <Main 
         planet={'Earth'}
         />
