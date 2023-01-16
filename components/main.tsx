@@ -124,25 +124,25 @@ const Main = ({planet}:{planet:string}) => {
         "
       >
         <div className="
-        w-[25rem]
+        w-[19rem] md:w-[25rem]
         border border-gray-700 py-4 px-6">
           <h1 className="text-2xl font-normal">Rotation </h1>
           <p className="text-gray-500 text-sm">{planetData.rotation}</p>
         </div>
         <div className=" 
-        w-[25rem]
+        w-[19rem] md:w-[25rem]
         border border-gray-700 py-4 px-6">
           <h1 className="text-2xl font-normal">Revolution</h1>
           <p className="text-gray-500 text-sm">{planetData.revolution}</p>
         </div>
         <div className=" 
-        w-[25rem]
+        w-[19rem]  md:w-[25rem]
         border border-gray-700 py-4 px-6">
           <h1 className="text-2xl font-normal">Radius </h1>
           <p className="text-gray-500 text-sm">{planetData.radius}</p>
         </div>
         <div className="
-        w-[25rem]
+        w-[19rem] md:w-[25rem]
         border border-gray-700 py-4 px-6">
           <h1 className="text-2xl font-normal">Average</h1>
           <p className="text-gray-500 text-sm">{planetData.temperature}</p>
