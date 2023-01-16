@@ -15,13 +15,13 @@ const Navbar = () => {
   ];
   return (
     <nav
-      className="text-white px-8 font-sans h-[10vh] flex 
-    justify-between items-center border-b border-gray-300
+      className="text-white px-8 py-4  flex flex-row md:flex-col 
+    justify-between items-center border-b border-gray-300 font-antonio
     bg-background-stars bg-cover bg-center bg-no-repeat bg-fixed
     bg-[#070722]
     "
     >
-      <h1 className="text-3xl font-bold tracking-wider">The Planet</h1>
+      <h1 className="text-3xl p-4 font-medium tracking-wider">The Planet</h1>
       <FontAwesomeIcon
         icon={faBars}
         onClick={() => setShow(!show)}
@@ -45,6 +45,7 @@ const Navbar = () => {
       ${show ? "block" : "hidden"} 
       md:hidden
       w-full h-full bg-black bg-opacity-80 z-10
+      p-4
       `}
       >
         <ul

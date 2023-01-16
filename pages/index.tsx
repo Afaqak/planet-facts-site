@@ -1,6 +1,7 @@
 import Head from "next/head";
 import data from "../data.json";
 import { useState } from "react";
+import Main from "../components/main";
 import Footer from "../components/footer";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -34,101 +35,9 @@ export default function Home() {
         className="font-mono relative min-h-screen
         bg-background-stars bg-cover bg-center bg-no-repeat bg-fixed
     bg-[#070722]"
-      >
-        <div
-          className="flex flex-col first-letter:
-        justify-evenly py-8 mb-20 md:mb-14
-         px-8 md:px-16 space-y-4 md:space-y-8
-      items-center h-[70vh] md:[75vh] md:flex-row"
-        >
-          <Image
-            src={image}
-            alt={planet.name}
-            className="object-cover 
-      md:w-[30vw] md:h-[34vw]
-      w-[25vw] h-[25vw]
-      md:object-cover
-       mt-32 md:mt-0
-      "
-            width={300}
-            height={300}
-          />
-          <div
-            className="flex flex-col
-        md:w-[40vw] space-y-2 md:space-y-4 md:text-left
-        text-center text-xs md:text-xl
-        px-4 md:px-0
-
-      "
-          >
-            <h1 className="text-2xl md:text-4xl font-bold tracking-wider text-white">
-              {planet.name.toUpperCase()}
-            </h1>
-            <p className="text-white md:text-xl text-lg">{category.content}</p>
-            <p className="text-white text-sm ">
-              Source :{" "}
-              <a href={category.source} className="text-purple-600">
-                Wikipedia
-              </a>
-            </p>
-            <div
-              className="flex md:flex-col self-end
-        absolute -top-2 left-0 flex-row md:relative
-        justify-between
-         md:space-x-0 md:space-y-4 md:justify-center md:gap-0
-         text-sm md:text-md mb-5 md:mb-0 border-b border-gray-300
-          md:border-b-0 w-full md:w-auto 
-        "
-            >
-              <button
-                className=" text-white font-bold 
-          py-3 px-10 
-          border-transparent
-          md:py-4 md:px-10 md:border
-          md:border-white
-          hover:bg-orange-800
-           transition duration-150 ease-in
-           hover:text-white"
-                onClick={() => {
-                  setCategory(planet.overview);
-                  setImage(planet.images.planet);
-                }}
-              >
-                Overview
-              </button>
-              <button
-                className=" 
-           text-white font-bold 
-           py-3 px-10 border-transparent
-           transition duration-150 ease-in
-           md:border-white
-           md:py-4 md:px-10 md:border hover:bg-purple-600 hover:text-white"
-                onClick={() => {
-                  setImage(planet.images.internal);
-                  setCategory(planet.structure);
-                }}
-              >
-                Internal Structure
-              </button>
-              <button
-                className="  text-white font-bold 
-            py-3 px-10 border-transparent
-             md:border-white
-            md:py-4 md:px-10 md:border
-            transition duration-150 ease-in
-           hover:bg-green-600
-           hover:text-white"
-                onClick={() => {
-                  setCategory(planet.geology);
-                  setImage(planet.images.geology);
-                }}
-              >
-                Surface Geology
-              </button>
-            </div>
-          </div>
-        </div>
-        <Footer features={feature} />
+      > 
+        <Main />
+        
       </div>
     </div>
   );

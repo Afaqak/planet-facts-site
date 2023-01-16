@@ -6,11 +6,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '375px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+      },
       backgroundImage:{
         'background-stars': "url('../public/assets/stars.svg')",
       },
       fontFamily: {
-        'sans': ['Inter', 'sans-serif'],
+        'antonio': ['Antonio', 'sans-serif'],
       }
     
     },
