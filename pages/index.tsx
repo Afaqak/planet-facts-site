@@ -1,28 +1,8 @@
 import Head from "next/head";
-import data from "../data.json";
-import { useState } from "react";
 import Main from "../components/main";
-import Footer from "../components/footer";
-import Image from "next/image";
-import { useRouter } from "next/router";
-
-type Feature = {
-  rotation: string;
-  revolution: string;
-  radius: string;
-  temperature: string;
-};
 
 export default function Home() {
-  const planet = data[0];
-  const [category, setCategory] = useState(planet.overview);
-  const [image, setImage] = useState(planet.images.planet);
-  const feature: Feature = {
-    rotation: planet.rotation,
-    revolution: planet.revolution,
-    radius: planet.radius,
-    temperature: planet.temperature,
-  };
+
 
   return (
     <div>
@@ -36,7 +16,9 @@ export default function Home() {
         bg-background-stars bg-cover bg-center bg-no-repeat bg-fixed
     bg-[#070722]"
       > 
-        <Main />
+        <Main 
+        planet={'Earth'}
+        />
         
       </div>
     </div>
