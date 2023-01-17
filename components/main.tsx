@@ -131,7 +131,7 @@ const Main = ({planet}:{planet:string}) => {
         </div>
         <div className=" 
         w-[19rem] md:w-[25rem]
-        border border-gray-700 py-4 px-6">
+        border border-gray-700 py-4 px-6">fdg
           <h1 className="text-2xl font-normal">Revolution</h1>
           <p className="text-gray-500 text-sm">{planetData.revolution}</p>
         </div>
