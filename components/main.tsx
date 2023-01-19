@@ -63,8 +63,8 @@ const Main = ({planet}:{planet:string}) => {
             <button
               
               className={`
-              md:min-w-[150px]
-              tracking-[0.2rem] text-[0.75rem] sm:text-[1rem] text-gray-200 cursor-pointer text-start border border-gray-700 py-2 px-4 md:pr-24 hover:bg-gray-700 hover:bg-opacity-40 ${
+              md:min-w-[250px]
+              tracking-[0.2rem] text-[0.75rem] sm:text-[1rem] text-gray-200 cursor-pointer text-start border border-gray-700 py-3 px-4 md:pr-24 hover:bg-gray-700 hover:bg-opacity-40 ${
                 activeButton === 1 ? "active" : ""
               }`}
               onClick={() => {handleButtonClick(1)
@@ -75,7 +75,7 @@ const Main = ({planet}:{planet:string}) => {
                 );
               }}
             >
-              <span className="hidden md:inline text-gray-400 text-[0.7rem] md:text-[1rem] leading-[0.4rem] px-1">
+              <span className="hidden md:inline text-gray-400 text-[0.7rem] leading-[0.4rem] ">
                 01
               </span>
               Overview
@@ -83,8 +83,9 @@ const Main = ({planet}:{planet:string}) => {
             <button
               
               className={`
-              md:min-w-[150px]
-              tracking-[0.2rem] text-[0.75rem]  sm:text-[1rem] text-gray-200 cursor-pointer focus:text-gray-100 border border-gray-700 py-2 px-4 md:pr-24 hover:bg-gray-700 hover:bg-opacity-40 ${
+              md:min-w-[250px]
+              tracking-[0.2rem] text-[0.75rem] sm:text-[1rem] text-gray-200 cursor-pointer text-start border border-gray-700 py-3 px-4 md:pr-24 hover:bg-gray-700 hover:bg-opacity-40
+               ${
                 activeButton === 2 ? "active" : ""
               }`}
               onClick={() => {
@@ -92,7 +93,7 @@ const Main = ({planet}:{planet:string}) => {
                 setActiveFeature(planetData?.structure);
                 handleButtonClick(2)}}
             >
-              <span className="hidden md:inline text-gray-400 text-[0.7rem] leading-[0.4rem] px-1">
+              <span className="hidden md:inline text-gray-400 text-[0.7rem] leading-[0.4rem] ">
                 02
               </span>
               Structure
@@ -100,8 +101,8 @@ const Main = ({planet}:{planet:string}) => {
             <button
               data-testid="surface"
               className={`
-              md:min-w-[150px]
-              tracking-[0.2rem] text-[0.75rem] sm:text-[1rem] text-gray-200 cursor-pointer text-start border border-gray-700 py-2 px-4 md:pr-24 hover:bg-gray-700 hover:bg-opacity-40 ${
+              md:min-w-[250px]
+              tracking-[0.2rem] text-[0.75rem] sm:text-[1rem] text-gray-200 cursor-pointer text-start border border-gray-700 py-3 px-4 md:pr-24 hover:bg-gray-700 hover:bg-opacity-40 ${
                 activeButton === 3 ? "active" : ""
               }`}
               onClick={() => {handleButtonClick(3)
@@ -109,7 +110,7 @@ const Main = ({planet}:{planet:string}) => {
                 setActiveFeature(planetData?.geology);
               }}
             >
-              <span className="hidden md:inline text-gray-400 text-[0.7rem] leading-[0.4rem] px-1">
+              <span className="hidden md:inline text-gray-400 text-[0.7rem] leading-[0.4rem]">
                 03
               </span>
               Surface
@@ -131,7 +132,7 @@ const Main = ({planet}:{planet:string}) => {
         </div>
         <div className=" 
         w-[19rem] md:w-[25rem]
-        border border-gray-700 py-4 px-6">fdg
+        border border-gray-700 py-4 px-6">
           <h1 className="text-2xl font-normal">Revolution</h1>
           <p className="text-gray-500 text-sm">{planetData.revolution}</p>
         </div>
