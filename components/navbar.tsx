@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Link from "next/link";
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
@@ -16,7 +16,7 @@ const Navbar = () => {
     "Neptune",
   ];
   return (
-    <nav
+    <motion.nav 
       className="text-white px-8 py-4  flex flex-row md:flex-col 
     justify-between items-center border-b border-gray-300 font-sans
     bg-background-stars bg-cover bg-center bg-no-repeat bg-fixed
@@ -91,7 +91,7 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
